@@ -73,7 +73,7 @@ const SearchPage: FC<SearchPageProps> = ({ }) => {
             <Pagination next={planets.next} previous={planets.previous} count={planets.count} />
             <div className="container h-full w-full px-10">
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                    {filteredPlanets?.map((planet: any, index) => (
+                    {planets && planets.results.map((planet: any, index) => (
                         <PlanetCard key={index} planetId={index + 1} planet={planet} />
                     ))}
                     {isLoading && <p className="col-span-1 w-full text-center italic font-starwar font-bold text-yellow-400">

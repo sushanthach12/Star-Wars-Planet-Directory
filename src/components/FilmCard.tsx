@@ -2,7 +2,6 @@ import { capitalizeFirstLetter, cn } from "@/lib/utils";
 import { characterAnimation } from "@/utils/framer";
 import { poller } from "@/utils/google-font";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import { FC } from "react"
 
 
@@ -13,7 +12,6 @@ interface FilmCardProps {
 
 const FilmCard: FC<FilmCardProps> = ({ film, filmId }) => {
 
-    // return <div className="flex flex-col bg-gray-900 rounded-md shadow-md p-4 bg-gradient-to-tr from-yellow-800 via-gray-800 to-blue-950">
     return <motion.div initial="hidden" animate="visible" variants={characterAnimation} transition={{ delay: 1 }} className="flex flex-col bg-gray-900 rounded-lg shadow-md p-4 bg-[url('/card-back.jpeg')] bg-cover bg-opacity-75 bg-blend-multiply border border-gray-800 transition-all duration-700 hover:scale-105 ">
             <div className="flex flex-row items-center justify-between">
                 <h1 className={cn(poller.className, "text-2xl font-bold text-yellow-400")}>{film?.title}</h1>
