@@ -24,7 +24,7 @@ const PlanetPage: FC<PlanetPageProps> = ({ params }) => {
         getPlanet(params.id)
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
-
+    console.log(planet)
 
     return <div className="bg-[url('/galaxy.jpg')] bg-fixed bg-opacity-70 bg-gray-950 bg-blend-multiply">
         {planet && <div className="pt-6">
@@ -34,7 +34,7 @@ const PlanetPage: FC<PlanetPageProps> = ({ params }) => {
 
                 </div>
 
-                <Link href={'/'}>
+                {/* <Link href={'/'}> */}
                     <motion.div
                         initial="initial"
                         animate="animate"
@@ -50,7 +50,7 @@ const PlanetPage: FC<PlanetPageProps> = ({ params }) => {
                             className='object-contain object-center'
                         />
                     </motion.div>
-                </Link>
+                {/* </Link> */}
 
                 <motion.div initial="initial" animate="animate" variants={LogoAnimation} className="mt-4 lg:row-span-3 lg:mt-0 h-full w-full flex items-center justify-center">
                     <div className="relative h-80 w-80">
@@ -58,7 +58,7 @@ const PlanetPage: FC<PlanetPageProps> = ({ params }) => {
                             fill
                             src={'/planet.png'}
                             alt="planet"
-                            className="animate-pulse"
+                            className="animate-pulse "
                         />
                     </div>
                 </motion.div>
@@ -67,11 +67,11 @@ const PlanetPage: FC<PlanetPageProps> = ({ params }) => {
                     <div className="flex flex-row gap-x-5 mt-4">
                         <div className="mr-4">
                             <span className="text-yellow-400 font-bold text-lg">Total Population</span>
-                            <p className="text-gray-400">{planet?.population}</p>
+                            <p className="text-gray-400">{planet.population}</p>
                         </div>
                         <div className="ml-4 flex flex-col">
                             <span className="text-yellow-400 font-bold text-lg">Residents</span>
-                            <p className="text-gray-400 inline-flex text-wrap">{planet?.residents.length}</p>
+                            <p className="text-gray-400 inline-flex text-wrap">{planet.residents.length}</p>
                         </div>
                         <div className="ml-4 flex flex-col">
                             <span className="text-yellow-400 font-bold text-lg">Diameter</span>
