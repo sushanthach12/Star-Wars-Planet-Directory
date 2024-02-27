@@ -31,3 +31,13 @@ This web application showcases planets from the Star Wars universe using the Sta
 
    ```bash
    git clone git@github.com:sushanthach12/Star-Wars-Planet-Directory.git
+   ```
+
+2. Install Dependencies
+   ```bash
+   yarn install
+   ```
+3. Run the development server
+   ```bash
+   yarn dev
+   ```
