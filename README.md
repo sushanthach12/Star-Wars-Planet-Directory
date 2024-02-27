@@ -1,6 +1,7 @@
 # Star Wars Planets Directory
 
 This web application showcases planets from the Star Wars universe using the Star Wars API (SWAPI). It provides information about each planet and lists its notable residents. The application demonstrates proficiency in API integration, frontend development, and responsive design.
+Built using Nextjs 14, Tailwindcss
 
 ## Features
 
